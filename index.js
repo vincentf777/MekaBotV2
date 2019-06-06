@@ -17,5 +17,6 @@ fs.readdir("./commands", function(err, files) {
 
 meka.on("message", msg => require("./events/message.js")(meka, msg));
 meka.on("ready", msg => require("./events/ready.js")(meka, msg));
+meka.on("error", e => console.log(e));
 
 meka.login(meka.tokens.botToken);
