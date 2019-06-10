@@ -12,6 +12,7 @@
   "dependencies": {
     "discord.js": "^11.2.1",
     "jimp": "^0.6.4",
+    "reaction-core": "^2.2.0",
     "request": "^2.88.0"
   }
 }
