@@ -1,6 +1,7 @@
+const rc = require("reaction-core");
 const Discord = require("discord.js");
 const fs = require("fs");
-const rc = require("reaction-core");
+
 
 
 const meka = new Discord.Client();

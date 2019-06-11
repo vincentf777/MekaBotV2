@@ -3,7 +3,7 @@ const request = require("request");
 const SITE_URL = "https://safebooru.donmai.us";
 
 const NAMES = {
-  dva = "d.va_(overwatch)"
+  dva: "d.va_(overwatch)"
 }
 
 const buttons = [
@@ -21,8 +21,11 @@ const buttons = [
 const embed = {
   fields: [
     {
-      name: '1',
+      name: '1⃣',
       value: 'D.Va'
+    }, {
+      name: '2 - D.Va',
+      value: ' - D.Va'
     }
   ]
 }
