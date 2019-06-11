@@ -1,10 +1,12 @@
 const fs = require("fs");
 
 module.exports = function(meka,msg,args) {
+	// Only allows bot owner to use this command.
 	if (msg.author.id != meka.tokens.dva) {
 		return;
 	}
 
+	// Clears all previously loaded commands and goes through commands folder again.
 	meka.commands.clear();
 	fs.readdir("./commands", function(err, files) {
 	files.forEach(function(file) {

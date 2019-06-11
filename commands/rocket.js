@@ -9,6 +9,7 @@ module.exports = function(meka, msg, args) {
 	const DVA_PATH = "./images/sources/dva.png";
 	const RES_PATH = "./images/final.png"
 
+	// Grabs target user's avatar and saves it.
 	request(msg.mentions.users.first().displayAvatarURL)
 		.pipe(fs.createWriteStream(AVA_PATH))
 		.on("close", async () => {
@@ -17,7 +18,11 @@ module.exports = function(meka, msg, args) {
 			let rocket = await jimp.read(R_PATH);
 			let ava = await jimp.read(AVA_PATH);
 			ava.resize(UNIT_SIZE, UNIT_SIZE);
+
+			// Chooses a random number of rockets. This can be changed to prefer more or less rockets.
 			let randInt = Math.floor(Math.random() * 5 + 2);
+
+			// Creates a new canvas that is the proper size for all images to be placed on top.
 			let bg = new jimp(UNIT_SIZE + randInt*R_WIDTH + UNIT_SIZE, UNIT_SIZE);
 
 			bg.composite(dva, 0, 0);

@@ -3,7 +3,7 @@ module.exports = function(meka, msg, args) {
 
 	if (dice == undefined) {
 		msg.channel.send("Not a valid roll");
-	} else 	if (dice.search(/\d*[d]\d+/) != -1) {
+	} else 	if (dice.search(/\d*[d]\d+/) != -1) { // Checks for proper dice rolling format. Eg. "7d4"
 		let sum = 0;
 		let values = dice.split(/[dD]/);
 		let diceAmount = parseInt(values[0]) || 1;

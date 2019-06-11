@@ -1,7 +1,6 @@
-const rc = require("reaction-core");
 const Discord = require("discord.js");
 const fs = require("fs");
-
+const rc = require("reaction-core");
 
 
 const meka = new Discord.Client();
@@ -13,6 +12,7 @@ meka.tokens = require("./strings/tokens.json");
 
 meka.commands = new Discord.Collection();
 
+// Reading file names in commands folder and using the file names as actual commands
 fs.readdir("./commands", function(err, files) {
 	files.forEach(function(file) {
 		const commandName = file.substring(0,file.length - 3);
