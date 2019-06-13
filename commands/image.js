@@ -22,12 +22,12 @@ sendMenu = async function (menu, msg) {
       } else {
         sendMessage = {embed: menu.text};
       }
-      msg.channel.send(sendMessage).then(async message => {
+      msg.channel.send(sendMessage).then(async menuMsg => {
         for (let button in menu.buttons) {
-          await msg.react(button).catch(console.error);
+          await menuMsg.react(button).catch(console.error);
         }
-        menu.register(msg);
-        resolve(msg);
+        menu.register(menuMsg);
+        resolve(menuMsg);
       })
   })
 }
