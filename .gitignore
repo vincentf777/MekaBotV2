@@ -1,4 +1,4 @@
 strings/*.json
-!strings/extokens.json
+!strings/ex*
 node_modules
 images/*.png
