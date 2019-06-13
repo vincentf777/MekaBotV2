@@ -1,0 +1,6 @@
+// Rename this file to tokens
+{
+	"dva" : "", // Bot owner ID goes here
+	"prefix" : "!", // You can change to your preference
+	"botToken" : "" // Get your bot token from Discord
+}
